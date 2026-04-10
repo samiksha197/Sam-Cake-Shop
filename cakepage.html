@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Cake Collection</title>
+    <link rel="stylesheet" href="style.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #fdf8f5; /* Light blush background */
+    padding: 40px 20px;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-title h1 {
+    font-size: 2.5rem;
+    color: #5d4037;
+}
+
+.filter-bar {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    margin: 5px;
+    border: 1px solid #d2b48c;
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: #d2b48c;
+    color: white;
+}
+
+/* Grid Setup */
+.product-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Card Styling */
+.product-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ff6b6b;
+    color: white;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #5d4037;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 12px;
+    background: #5d4037;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-to-cart:hover {
+    background: #8d6e63;
+}
+</style>
+</head>
+<body>
+
+    <section class="page-title">
+        <h1>Our Cake Collection</h1>
+        <p>Freshly baked daily using premium organic ingredients.</p>
+    </section>
+
+    <div class="filter-bar">
+        <span>Filter by:</span>
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Wedding</button>
+        <button class="filter-btn">Birthday</button>
+        <button class="filter-btn">Vegan</button>
+    </div>
+
+    <main class="product-container">
+        <div class="product-card">
+            <div class="badge">Bestseller</div>
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587" alt="Chocolate Cake">
+            <div class="product-info">
+                <h3>Midnight Chocolate</h3>
+                <p class="description">Triple-layered dark chocolate with ganache filling.</p>
+                <p class="price">$45.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e" alt="Strawberry Cake">
+            <div class="product-info">
+                <h3>Strawberry Summer</h3>
+                <p class="description">Light sponge with fresh berries and whipped cream.</p>
+                <p class="price">$38.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729" alt="Carrot Cake">
+            <div class="product-info">
+                <h3>Classic Carrot</h3>
+                <p class="description">Spiced carrot cake with smooth cream cheese frosting.</p>
+                <p class="price">$42.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1464347744102-11db6282f854" alt="Funfetti Cake">
+            <div class="product-info">
+                <h3>Birthday Blast</h3>
+                <p class="description">Vanilla funfetti with rainbow sprinkles and buttercream.</p>
+                <p class="price">$35.00</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
